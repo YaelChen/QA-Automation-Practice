@@ -7,9 +7,9 @@ test('Login to Saucedemo.com and commit purchase', async({ page }) => {
     });
 
     await test.step('Login with valid credentials', async() => {
-        await page.locator('[data-test="username"]').fill('standard_user');
-        await page.locator('[data-test="password"]').fill('secret_sauce');
-        await page.locator('[data-test="login-button"]').click();
+        await page.locator('#user-name').fill('standard_user');
+        await page.locator('#password').fill('secret_sauce');
+        await page.locator('#login-button').click();
     });
 
     await test.step('Add item to cart', async() => {
@@ -18,18 +18,18 @@ test('Login to Saucedemo.com and commit purchase', async({ page }) => {
 
     await test.step('Go to cart and start checkout', async() => {
         await page.locator('[data-test="shopping-cart-link"]').click();
-        await page.locator('[data-test="checkout"]').click();
+        await page.locator('#checkout').click();
     });
 
     await test.step('Fill in checkout form', async() => {
-        await page.locator('[data-test="firstName"]').fill('Nills');
-        await page.locator('[data-test="lastName"]').fill('Holgerson');
-        await page.locator('[data-test="postalCode"]').fill('96099');
-        await page.locator('[data-test="continue"]').click();
+        await page.locator('#first-name').fill('Nils');
+        await page.locator('#last-name').fill('Holgersson');
+        await page.locator('#postal-code').fill('96099');
+        await page.locator('#continue').click();
     });
 
     await test.step('Finish purchase', async() => {
-        await page.locator('[data-test="finish"]').click();
+        await page.locator('#finish').click();
     });
 
     await test.step('Verify confirmation message', async() => {
