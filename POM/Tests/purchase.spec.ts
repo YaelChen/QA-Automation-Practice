@@ -6,7 +6,6 @@ import { CheckoutPage } from '../Pages/CheckoutPage'
 import { CheckoutOverviewPage } from '../Pages/CheckoutOverviewPage'
 import { CheckoutCompletePage } from '../Pages/CheckoutCompletePage'
 
-
 test('Login to Saucedemo.com and commit purchase', async({ page }) => {
 
     await test.step('Navigate to login page', async() => {
