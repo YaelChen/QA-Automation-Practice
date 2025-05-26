@@ -37,4 +37,5 @@ test('Login to Saucedemo.com and commit purchase', async({ page }) => {
     const checkoutCompletePage = new CheckoutCompletePage(page);
     checkoutCompletePage.verifyThanksMessage
     checkoutCompletePage.verifyCartIsEmpty
+    
 });
